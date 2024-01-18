@@ -47,3 +47,27 @@ localhost:8080/ventas/traer-todas
 
 *Traer venta en especifico, en este caso la venta con id 1* ---> 
 localhost:8080/ventas/encontrar/1
+
+*Eliminar venta en especifico, en este caso la venta con id 1* ---> 
+localhost:8080/ventas/eliminar/1
+
+*Editar venta, cambiar los parametros a conveniencia y poner parametros de productos y cliente en el body de la peticion* ---> 
+localhost:8080/ventas/editar/1?fecha_venta=2017-07-22&total=25.35
+
+{
+    "lista_productos" : [
+                            {"id_producto" : 1}, 
+                            {"id_producto" : 2}, 
+                            {"id_producto" : 3}
+],
+    "un_cliente" :{"id_cliente" : 1}
+}
+
+*Obtener la lista de productos de una determinada venta* ---> 
+localhost:8080/ventas/productos/1
+
+*Obtener la sumatoria del monto y también cantidad total de ventas de un determinado día* ---> 
+localhost:8080/ventas/2018-08-21
+
+*Obtener el codigo_venta, el total, la cantidad de productos, el nombre del cliente y el apellido del cliente de la venta con el monto más alto de todas* ---> 
+localhost:8080/ventas/mayor_venta
